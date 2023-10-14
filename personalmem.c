@@ -43,7 +43,7 @@ if (x ==4095) {
 
 }
 
-void *mymalloc(size_t size) {
+void *memalloc (size_t size) {
 char* resultPtr;
 struct header * ptr; 
 resultPtr = memory;
@@ -173,7 +173,7 @@ if (nextHPtr -> validity ==0) {
 return -1;
 }
 
-void myfree(void *ptr) {
+void free(void *ptr) {
 char * currentTraverse = memory;
 char* previousTraverse = memory;
 char * nextTraverse = memory;
