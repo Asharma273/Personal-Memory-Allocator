@@ -1,2 +1,4 @@
 # Personal-Memory-Allocator
-The personal memory allocator was a way to experiment with how dynamic memory works. The C language was chosen, because of the  
+The personal memory allocator was a way to experiment with how dynamic memory works. The C language was chosen, because of the lower-level nature of the language in comparison to other languages such as Java or Python.  
+How it functions: The user calls the allocator along with the amount of bytes that are requested. Then a meta datablock is established in memory, which then has then stores the size and the validity of the information that will be stored in the data. The validitiy is a way to check whether the blocks of data have been marked as "free" so they can be overwritten. The free function looks for these metadata blocks and the validity and then coalesces adjacent blocks together, making it one bigger block of free space.
+Notes: This personal implementation of the dynamic memory allocator takes longer to free than the default one (due to the coalescing), however, it is efficinet  enough for use. 
